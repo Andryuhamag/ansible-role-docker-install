@@ -5,3 +5,4 @@
     groups: docker
     append: true
   loop: '{{ docker_users }}'
+  listen: "add docker users"

@@ -5,7 +5,6 @@
     state: absent
     purge: true
 
-
 - name: Debian OS | Ensure dependencies are installed
   ansible.builtin.package:
     name: '{{ docker_required_packages }}'
@@ -28,4 +27,4 @@
     name: '{{ docker_packages }}'
     state: present
     update_cache: true
-  notify: "Add user(s) to docker group"
+  notify: "add docker users"
